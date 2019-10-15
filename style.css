@@ -13,7 +13,7 @@ body {
   color: #444;
 /* font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif; */
 /*   font-family: Helvetica, sans-serif; */
-  font-family: Freemono, monospace;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   line-height: 1.7;
   padding: 1em;
@@ -72,7 +72,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #111;
   line-height: 125%;
   margin-top: 2em;
@@ -126,7 +126,7 @@ hr {
 
 pre, code, kbd, samp {
   color: #000;
-  font-family: monospace, monospace;
+  font-family: 'Freemono', monospace, monospace;
   _font-family: 'courier new', monospace;
   font-size: 0.98em;
 }
