@@ -1,3 +1,191 @@
 /* 
--family: 'Sriracha', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Sriracha', cursive;
 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --color-text: #555;
+    --background-color: #eee;
+    --background-header: #fff;
+    --background-footer: #222;
+    --title-font: 'Sriracha', cursive;
+    --second-font: 'Lato', sans-serif;
+    --backgrond-button: #ff7b00;
+    --color-button: #fff;
+}
+body {
+    background-color: var(--background-color, #eee);
+}
+.header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-header, #fff);
+    font-family: var(--title-font, 'Sriracha', cursive);
+    
+}
+.wrap-header {
+    max-width: 1366px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-title {
+    color: var(--color-text, #888);
+}
+.icon {
+    margin-left: 0.5em;
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--color-text, #888);
+}
+.wrap-main {
+    margin-top: 78.8px;
+    max-width: 1366px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.banner {
+    background-image: url("../img/2020-02-kojima.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+.name-banner {
+    font-family: var(--title-font);
+    margin-bottom: 0;
+    color: var(--color-text);
+}
+.description-name-banner {
+    font-family: var(--second-font);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--color-text);
+}
+.container-items {
+    padding-top: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item {
+    position: relative;
+    margin-bottom: 2.5em;
+}
+.image-item {
+    display: block;
+    width: 100%;
+}
+.title-item {
+    display: none;
+}
+.item:hover .title-item{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+    color: #fff;
+    text-align: center;
+    font-family: var(--second-font);
+}
+.hidden-items {
+    display: none;
+}
+.wrap-button {
+    margin-bottom: 2.5em;
+}
+.link-show-more {
+    border-radius: 0.5em;
+    background-color: var(--backgrond-button);
+    padding: 1em 2em;
+    text-decoration: none;
+    font-family: var(--title-font);
+    color: var(--color-button);
+}
+.link-show-more:active {
+    background-color: #222;
+}
+/* below this line is for javascript*/
+.show-items {
+    display: block;
+}
+/* above this line is for javascript*/
+.footer {
+    background-color: var(--background-footer);
+    font-family: var(--second-font);
+    color: #fff;
+    text-align: center;
+}
+.wrap-footer {
+    max-width: 1366px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2.5em;
+}
+.info-footer {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.info-footer > span {
+    display: block;
+    font-size: 1rem;
+    font-weight: initial;
+}
+@media (min-width:768px) {
+    .container-items {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 5.5em;
+    }
+    .wrap-button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .show-items {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width:996px) {
+    .container-items {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-right: 2.5em;
+        padding-left: 2.5em;
+        column-gap: 2.5em;
+    }
+    .show-items {
+        grid-column: span 3;
+        column-gap: 2.5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
